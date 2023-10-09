@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{234218D2-40CC-4B0C-B1E0-6CC675B6927A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineCosmos.EntityFrameworkCore.Migrations.Auto", "src\MineCosmos.EntityFrameworkCore.Migrations.Auto\MineCosmos.EntityFrameworkCore.Migrations.Auto.csproj", "{34C04ABD-F604-4ADC-B57B-F394E6CDBB12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{D223A1E5-BF08-4542-B3E5-36D76EE4EB80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSample", "samples\AutoSample\AutoSample.csproj", "{664F9A6B-8AF2-4946-A770-01A318847C5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34C04ABD-F604-4ADC-B57B-F394E6CDBB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C04ABD-F604-4ADC-B57B-F394E6CDBB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C04ABD-F604-4ADC-B57B-F394E6CDBB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C04ABD-F604-4ADC-B57B-F394E6CDBB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664F9A6B-8AF2-4946-A770-01A318847C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664F9A6B-8AF2-4946-A770-01A318847C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664F9A6B-8AF2-4946-A770-01A318847C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664F9A6B-8AF2-4946-A770-01A318847C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34C04ABD-F604-4ADC-B57B-F394E6CDBB12} = {234218D2-40CC-4B0C-B1E0-6CC675B6927A}
+		{664F9A6B-8AF2-4946-A770-01A318847C5D} = {D223A1E5-BF08-4542-B3E5-36D76EE4EB80}
+	EndGlobalSection
+EndGlobal
