@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MineCosmos.EntityFrameworkCore.Migrations.Auto.DbContexts;
 
-namespace AutoSample;
+namespace AutoSample.Data;
 
-public class SampleDbContext : DbContext
+public class SampleDbContext : AutoMigration<SampleDbContext>
 {
     public SampleDbContext(DbContextOptions<SampleDbContext> options) : base(options) { }
 

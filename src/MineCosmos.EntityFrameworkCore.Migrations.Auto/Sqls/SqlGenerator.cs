@@ -2,5 +2,8 @@
 
 public class SqlGenerator
 {
-    
+    public string CreateTable()
+    {
+        return "";
+    }
 }

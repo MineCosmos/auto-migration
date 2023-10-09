@@ -1,4 +1,4 @@
-﻿namespace MineCosmos.EntityFrameworkCore.Migrations.Auto;
+﻿namespace MineCosmos.EntityFrameworkCore.Migrations.Auto.Enums;
 
 /// <summary>
 /// 迁移类型

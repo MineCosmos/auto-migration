@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace MineCosmos.EntityFrameworkCore.Migrations.Auto;
+namespace MineCosmos.EntityFrameworkCore.Migrations.Auto.Attributes;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 public class TryMigrationAttribute : Attribute
@@ -17,12 +17,11 @@ public class SkipMigrationAttribute : Attribute
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
 public class LinkMigrationAttribute : Attribute
 {
-    private int _order = 0;
     public LinkMigrationAttribute(int order)
     {
-        _order = order;
+        Order = order;
     }
 
     [NotNull]
-    public int Order => _order;
+    public int Order { get; } = 0;
 }
