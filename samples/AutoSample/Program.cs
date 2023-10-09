@@ -19,7 +19,7 @@ builder.Services.AddDbContext<SampleDbContext>(opts =>
 });
 
 builder.Services.AddAutoMigration<SampleDbContext>();
-
+builder.Services.AddRazorPages();
 var app = builder.Build();
 
 app.UseAutoMigration<SampleDbContext>(MigrationMode.Design);
@@ -31,10 +31,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
+// app.UseHttpsRedirection();
+app.UseBlazorFrameworkFiles();
+// app.UseStaticFiles();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapFallbackToPage("/_Host");
 
 app.Run();

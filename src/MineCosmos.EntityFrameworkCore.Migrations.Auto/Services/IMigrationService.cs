@@ -17,14 +17,14 @@ public interface IMigrationService
 
 public sealed class MigrationService : IMigrationService
 {
-    private readonly IMigrationService<MigrationDetail> _migrationDetailService;
-    private readonly IMigrationService<MigrationBackup> _migrationBackupService;
-    private readonly IMigrationService<MigrationLink> _migrationLinkService;
+    private readonly IAutoMigrationService<MigrationDetail> _migrationDetailService;
+    private readonly IAutoMigrationService<MigrationBackup> _migrationBackupService;
+    private readonly IAutoMigrationService<MigrationLink> _migrationLinkService;
 
-    internal MigrationService(
-        IMigrationService<MigrationDetail> migrationDetailService
-        ,IMigrationService<MigrationBackup> migrationBackupService
-        ,IMigrationService<MigrationLink> migrationLinkService)
+    public MigrationService(
+        IAutoMigrationService<MigrationDetail> migrationDetailService
+        ,IAutoMigrationService<MigrationBackup> migrationBackupService
+        ,IAutoMigrationService<MigrationLink> migrationLinkService)
     {
         _migrationDetailService = migrationDetailService;
         _migrationBackupService = migrationBackupService;

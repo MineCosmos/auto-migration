@@ -1,6 +1,13 @@
-﻿namespace MineCosmos.EntityFrameworkCore.Migrations.Web.Extensions;
+﻿using Microsoft.AspNetCore.Builder;
 
-public class MigrationWebExtensions
+namespace MineCosmos.EntityFrameworkCore.Migrations.Web.Extensions;
+
+public static class MigrationWebExtensions
 {
-    
+    public static IApplicationBuilder UseMigrationWeb(this IApplicationBuilder app)
+    {
+        //app.UseBlazorFrameworkFiles();
+        
+        return app;
+    }
 }

@@ -15,9 +15,9 @@ public static class AutoMigrationExtensions
         where T : AutoMigration<T>
     {
         services.AddDbContext<MigrationDbContext>();
-        services.AddScoped(typeof(IMigrationService<>), typeof(MigrationService<>));
+        services.AddScoped(typeof(IAutoMigrationService<>), typeof(AutoMigrationService<>));
         services.AddScoped<IMigrationService, MigrationService>();
-        services.AddScoped<IMigrationHistoryService<T>, IMigrationHistoryService<T>>();
+        services.AddScoped<IMigrationHistoryService<T>, MigrationHistoryService<T>>();
         
         return services;
     }

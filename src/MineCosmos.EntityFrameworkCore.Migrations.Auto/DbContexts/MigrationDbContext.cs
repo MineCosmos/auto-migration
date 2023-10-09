@@ -3,7 +3,7 @@ using MineCosmos.EntityFrameworkCore.Migrations.Auto.Domain;
 
 namespace MineCosmos.EntityFrameworkCore.Migrations.Auto.DbContexts;
 
-internal class MigrationDbContext:DbContext
+public class MigrationDbContext:DbContext
 {
     public DbSet<MigrationDetail> MigrationDetails { get; set; } = null!;
     public DbSet<MigrationLink> MigrationLinks { get; set; } = null!;

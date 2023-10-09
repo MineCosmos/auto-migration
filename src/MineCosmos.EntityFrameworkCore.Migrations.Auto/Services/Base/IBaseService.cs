@@ -13,7 +13,7 @@ public class MigrationParameter
     public DateTime? MaxDate { get; set; }
 }
 
-internal interface IMigrationService<T> where T:class, IEntity
+public interface IAutoMigrationService<T> where T:class, IEntity
 {
     Task<PagedList<T>> GetListAsync(MigrationParameter? parameter = null);
 
@@ -22,11 +22,11 @@ internal interface IMigrationService<T> where T:class, IEntity
     IQueryable<T> Query();
 }
 
-internal class MigrationService<T>:IMigrationService<T> where T:class, IEntity
+internal class AutoMigrationService<T>:IAutoMigrationService<T> where T:class, IEntity
 {
     private readonly MigrationDbContext _db;
 
-    public MigrationService(MigrationDbContext db)
+    public AutoMigrationService(MigrationDbContext db)
     {
         _db = db;
     }
